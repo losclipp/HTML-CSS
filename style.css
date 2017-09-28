@@ -51,22 +51,42 @@ p{
 	height: 35px;
 	border-radius: 5px;
 }
-#user {
+.user {
 	color: white;
 	text-decoration: none;
 	display: flex;
 	justify-content: space-between;
-	padding: 15px 25px;
+	padding: 10px 15px;
 }
-#user h1 {
+.user h3 {
 	font-weight: 900;
 	font-size: 20px;
 	font-stretch: ultra-condensed;
 }
-#user p{
+.user p{
 	opacity: 0.5;
 }
 .fa-circle {
 	color: #99D04A;
 	font-size: 10px;
+}
+.user .fa-bell-o {
+	opacity: 0.5;
+}
+.fa-bell-o:hover{
+	opacity: 1;
+}
+.user-line {
+	display: flex;
+	justify-content: flex-start;
+}
+
+
+
+
+.hover-white:hover p {
+	opacity: 1;
+}
+.hover-white:hover {
+	cursor: pointer;
 }
