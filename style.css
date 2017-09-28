@@ -11,7 +11,6 @@ p{
 	font-family: 'Lato', sans-serif;
 }
 .body>section{
-	/* display: inline-block; */
 	height: 100%;
 }
 .current-chat {
@@ -24,7 +23,6 @@ p{
 }
 .chat-content>section {
 	height: 100%;
-	/* display: inline-block; */
 }
 .left-side {
 	float: left;
@@ -50,39 +48,101 @@ p{
 	width: 35px;
 	height: 35px;
 	border-radius: 5px;
+
 }
-.user {
+.edge-padding {
+	padding: 5px 15px;
+}
+.left-side>.user {
 	color: white;
 	text-decoration: none;
 	display: flex;
 	justify-content: space-between;
-	padding: 10px 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
+
 .user h3 {
 	font-weight: 900;
 	font-size: 20px;
 	font-stretch: ultra-condensed;
 }
+.left-side {
+	font-family: 'Lato', sans-serif;
+	font-size: 15px;
+}
 .user p{
-	opacity: 0.5;
+	font-size: 13px;
 }
-.fa-circle {
-	color: #99D04A;
+.user .user-line
+{
+	padding-top: 10px;
+}
+.user-line i{
+	font-size: 14px;
+	padding-bottom: 0px;
+}
+.left-side .fa-circle {
 	font-size: 10px;
+	padding-bottom: 3px;
+	color: #99D04A;
 }
-.user .fa-bell-o {
-	opacity: 0.5;
+.ref-and-button {
+	display: flex;
+	justify-content: space-between;
 }
-.fa-bell-o:hover{
+.ref-and-button>* {
+	color: white;
+	display: block;
+}
+.ref-and-button>*:hover {
 	opacity: 1;
+	cursor: pointer;
+}
+.user>i{
+	opacity: 0.5;
 }
 .user-line {
 	display: flex;
 	justify-content: flex-start;
+	align-items: center;
+}
+.user-line p {
+	padding-left: 7px;
+}
+.left-side a {
+	text-decoration: none;
+	color: white;
+}
+.left-side p{
+	color: white;
+	opacity: 0.5;
 }
 
+.theards{
+	margin: 17px 0 17px 0;
+}
 
+.theards>a{
+	display: flex;
+	justify-content: flex-start;
+}
 
+.theards i {
+	font-size: 15px;
+	padding-right: 5px;	
+}
+
+.hover-line:hover {
+	background-color: rgba(0,0,0,0.15);
+}
+.chanels i{
+	opacity: 0.5;
+	
+}
+.chanels {
+	padding-bottom: 10px;
+}
 
 .hover-white:hover p {
 	opacity: 1;
@@ -90,3 +150,12 @@ p{
 .hover-white:hover {
 	cursor: pointer;
 }
+.channel-list ul li i
+{
+	opacity: 0.5;
+}
+.channel-list li {
+	padding-left: 3px;
+}
+
+
