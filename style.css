@@ -28,6 +28,7 @@ p{
 	float: left;
 	background-color: #4D5250;
 	width: 200px;
+	position: relative;
 }
 .main{
 	overflow: hidden;
@@ -91,11 +92,11 @@ p{
 	display: flex;
 	justify-content: space-between;
 }
-.ref-and-button>* {
+.left-side .ref-and-button>* {
 	color: white;
 	display: block;
 }
-.ref-and-button>*:hover {
+.left-side .ref-and-button>*:hover {
 	opacity: 1;
 	cursor: pointer;
 }
@@ -110,10 +111,16 @@ p{
 .user-line p {
 	padding-left: 7px;
 }
-.left-side a {
+a {
 	text-decoration: none;
+}
+.left-side a {
 	color: white;
 }
+.main a {
+	color: black;
+}
+
 .left-side p{
 	color: white;
 	opacity: 0.5;
@@ -136,7 +143,7 @@ p{
 .hover-line:hover {
 	background-color: rgba(0,0,0,0.15);
 }
-.chanels i{
+.left-side .ref-and-button i{
 	opacity: 0.5;
 	
 }
@@ -156,6 +163,182 @@ p{
 }
 .channel-list li {
 	padding-left: 3px;
+}
+.users-list .user-line .fa-times-circle-o {
+	visibility: hidden;
+	opacity: 0.5;
+}
+.users-list .user-line .fa-times-circle-o:hover {
+	opacity: 0.8;
+}
+.users-list .hover-line:hover .fa-times-circle-o{
+	visibility: visible; 
+}
+.user-online>i:first-child  {
+	font-size: 10px;
+    padding-bottom: 3px;
+    color: #99D04A;
+}
+.user-ofline  {
+	font-style: italic;
+}
+.user-ofline>i:first-child {
+	font-size: 10px;
+    padding-bottom: 3px;
+	color: white;
+	opacity: 0.5;
+}
+.users-list .user-line .fa-times-circle-o {
+	position: absolute;
+	left: auto;
+	right: 15px;
+}
+.users-list .user-line
+{
+	position: relative;
+}
+.direct-messages {
+	padding: 20px 15px 15px;
+}
+.apps {
+	padding: 20px 15px 15px;
+}
+.switcher {
+	position: absolute;
+	text-align: center;
+	bottom: 20px;
+	width: 100%;
+}
+.switcher .fa-search {
+	color: white;
+	font-size: 25px;
+	opacity: 0.5;
+}
+.switcher .fa-search:hover {
+	opacity: 1;
+}
+
+.grid {
+	display: grid;
+	grid-template-areas: 	"header header"
+							"chat info"
+							"mess info";
+	height: 100%;
+	grid-template-columns: minmax(200px, 2fr) minmax(270px, 1fr);
+	grid-template-rows: 60px 1fr 60px;
+}
+
+
+.channel-header {
+	grid-area: header;
+	display: flex;
+	justify-content: space-between;
+	
+}
+.channel-header{
+	/* opacity: 0.5; */
+	color: #717274;
+}
+.chat {
+	background-color: green;
+	grid-area: chat;
+}
+.information {
+	background-color: blue;
+	grid-area: info;
+}
+.message {
+	background-color: yellow;
+	grid-area: mess;
+}
+.channel-name p {
+	font-weight: 900;
+	font-size: 18px;
+}
+.channel-name p{
+	color: black;
+}
+.channel-header {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.tool-flex-container {
+	display: flex;
+	justify-content: flex-start;
+}
+.tool-flex-container>.separator{
+	width: 1px;
+	background-color:  #D0D1D2;
+	/* border-left: 1px solid #D0D1D2; */
+	height: 10px;
+	padding: 0 0;
+	margin: 5px 0;
+}
+.tool-flex-container>*{
+	/* margin: 0 5px; */
+	padding: 5px 8px;
+}
+.channel-header .yellow-hover:hover {
+	color: yellow;
+	cursor: pointer;
+}
+.channel-header .red-hover:hover {
+	color: red;
+	cursor: pointer;
+}
+.channel-header .blue-hover:hover{
+	color: blue;
+	cursor: pointer;
+}
+.chanel-tool{
+	display: flex;
+	flex-direction: column;
+}
+.chanel-tool>* {
+	margin: auto 0;
+}
+.tool-flex-container>.tool-button, .tool-flex-container i {
+	font-size: 13px;
+	font-weight: 900;
+}
+.tool-flex-container .edit {
+	visibility: hidden;
+}
+.tool-flex-container .edit{
+	color: blue;
+}
+.tool-flex-container .new-topic:hover+.edit {
+	visibility: visible;
+}
+.tool-flex-container .edit:hover{
+	visibility: visible;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.tool-flex-container .new-topic:hover{
+	border-color: #717274;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.tool-flex-container .new-topic{
+	border: 1px solid white;
+}
+.channel-panel {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	font-size: 22px;
+	align-items: center;
+}
+.search-action>input {
+	outline: none;
+	border: none;
+}
+.search-action {
+	width: 275px;
+	border: 2px solid #A0A0A2;
+	border-radius: 5px;
+	height: 30px;
 }
 
 
