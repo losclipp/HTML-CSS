@@ -225,7 +225,7 @@ a {
 							"mess info";
 	height: 100%;
 	grid-template-columns: minmax(200px, 2fr) minmax(270px, 1fr);
-	grid-template-rows: 60px 1fr 60px;
+	grid-template-rows: 60px 1fr auto;
 }
 
 
@@ -244,11 +244,10 @@ a {
 	grid-area: chat;
 }
 .information {
-	background-color: blue;
 	grid-area: info;
 }
 .message {
-	background-color: yellow;
+	/* background-color: yellow; */
 	grid-area: mess;
 }
 .channel-name p {
@@ -279,15 +278,15 @@ a {
 	padding: 5px 8px;
 }
 .channel-header .yellow-hover:hover {
-	color: yellow;
+	color: #ffcc00;
 	cursor: pointer;
 }
 .channel-header .red-hover:hover {
-	color: red;
+	color: #da3c3f;
 	cursor: pointer;
 }
 .channel-header .blue-hover:hover{
-	color: blue;
+	color: #0576b9;
 	cursor: pointer;
 }
 .chanel-tool{
@@ -299,13 +298,13 @@ a {
 }
 .tool-flex-container>.tool-button, .tool-flex-container i {
 	font-size: 13px;
-	font-weight: 900;
+	font-weight: 500;
 }
 .tool-flex-container .edit {
 	visibility: hidden;
 }
 .tool-flex-container .edit{
-	color: blue;
+	color: #0576b9;
 }
 .tool-flex-container .new-topic:hover+.edit {
 	visibility: visible;
@@ -316,7 +315,7 @@ a {
 	cursor: pointer;
 }
 .tool-flex-container .new-topic:hover{
-	border-color: #717274;
+	border-color: #e8e8e8;
 	border-radius: 5px;
 	cursor: pointer;
 }
@@ -333,12 +332,104 @@ a {
 .search-action>input {
 	outline: none;
 	border: none;
+	font-family: 'Lato', sans-serif;
+	font-size: 16px;
 }
 .search-action {
 	width: 275px;
 	border: 2px solid #A0A0A2;
 	border-radius: 5px;
 	height: 30px;
+	display: flex;
+	align-items: center;
 }
-
-
+.channel-panel>div {
+	padding: 5px;
+	border-radius: 5px;
+}
+.search-action .fa-search {
+	padding: 8px;
+	font-size: 16px;
+}
+.search-action>input::placeholder {
+	color: #a0a0a0;
+}
+.message-container{
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	/* position: relative; */
+	margin: 0 20px 18px 18px;
+	border: 2px solid #bcbcbe;
+	border-radius: 5px;
+	outline: none;
+}
+.message-container>*
+{
+	padding: 10px;
+	font-family: 'Lato', sans-serif;
+	font-size: 18px; 
+}
+button {
+	background-color: inherit;
+	outline: none;
+	border: none;
+}
+.message-container .message-input {
+	outline: none;
+	width: 100%;
+	max-height: 100px;
+	overflow-y: auto;
+	align-self: center;
+	color: black;
+}
+.message-container>.add{
+	font-size: 20px;
+	border-right: 2px solid #bcbcbe;
+	align-self: stretch;
+	font-weight: bold;
+	width: 46px;
+}
+.message-container>*{
+	color: #bcbcbe;
+}
+[placeholder]:empty:before{
+	content:attr(placeholder);
+	color: #bcbcbe;
+}
+.message-container>.add:hover{
+	background-color: #56b68b;
+	color: white;
+}
+.message-container>.at>i{
+	width: 20px;
+	height: 20px;
+	background-image: url(img/email-black.svg);
+	background-repeat: no-repeat;
+	display: block;
+	transition: all 100ms linear;
+	margin-top: 3px;
+}
+.message-container>.at{
+	padding-right: 5px;
+}
+.message-container>.at:hover>i {
+	background-image: url(img/email-blue.svg);
+	transform: scale(1.3,1.3);
+}
+ .message-container>.smile>i {
+	width: 20px;
+	height: 20px;
+	background-image: url(img/happiness.svg);
+	background-repeat: no-repeat;
+	display: block;
+	transition: all 100ms linear;
+	margin-top: 3px;
+}
+.message-container>.smile{
+	padding-left: 5px;
+} 
+.message-container>.smile:hover>i {
+	background-image: url(img/happy.svg);
+	transform: scale(1.3,1.3);
+}
