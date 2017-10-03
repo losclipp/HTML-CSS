@@ -1,0 +1,115 @@
+.information {
+	display: flex;
+	flex-direction: column;
+}
+.header-container{
+	display: flex;
+	justify-content: space-between;
+}
+.panel-container>*, .header-container{
+	padding: 17px 17px 17px 10px;
+	/* box-sizing: border-box; */
+	font-family: 'Lato', sans-serif;
+	font-size: 18px;
+	border-top: 1px solid #E8E8E8;
+
+}
+.panel-container {
+	overflow-y: auto;
+}
+.panel-container>details>summary {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	outline: none;
+	opacity: 0.6;
+}
+.panel-container>details>summary:hover {
+	opacity: 0.8;
+	cursor: pointer;
+}
+.information summary::-webkit-details-marker {
+    order: 3;
+}
+.information summary::-moz-details-marker {
+    order: 3;
+}
+.panel-container>details>summary>p{
+	flex: 1;
+	padding-left: 8px;
+}
+.panel-container .fa-info-circle
+{
+	color: #717274;
+}
+.panel-container .fa-eercast
+{
+	color: #2D9EE0;
+}
+.panel-container .fa-thumb-tack
+{
+	color: #f26130;
+}
+.panel-container .fa-user-o
+{
+	color: #83b27d;
+}
+.panel-container .fa-files-o
+{
+	color: #ff9000;
+}
+.panel-container .fa-bell-o
+{
+	color: #eb4d5c;
+}
+.panel-container {
+	overflow-y: auto;
+}
+.channel-details>div{
+	margin: 0 5px 30px 5px;
+}
+.channel-details>.purpose {
+	margin-top: 20px;
+}
+.channel-details .title{
+	font-size: 13px;
+	font-weight: 900;
+	color: #717274;
+	padding-bottom: 15px;
+}
+.channel-details .purpose a {
+	color: #005e99;
+}
+.channel-details a:hover {
+	text-decoration: underline;
+}
+.channel-details>div {
+	font-size: 15px;
+}
+.channel-details .user {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 5px 0;
+}
+.channel-details .user img {
+	height: 35px;
+	width: 35px;
+	border-radius: 3px;
+}
+.channel-details .user>p {
+	font-weight: bold;
+	padding-left: 10px;
+	padding-right: 5px;
+}
+.channel-details .user .fa {
+	font-size: 10px;
+}
+.channel-details .user .fa-circle-o{
+	color: #9d9f9e;
+}
+.channel-details .user .fa-circle{
+	color: #99D04A;
+}
+
