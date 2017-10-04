@@ -1,0 +1,106 @@
+.chat {
+	overflow-y: auto;
+}
+.message-grid {
+	position: relative;
+	padding: 7px 25px 7px 18px;
+}
+.message-grid:hover .mess-tools {
+	/* display: flex; */
+	visibility: visible;
+}
+.message-grid .header>.fa {
+	visibility: hidden;
+}
+.message-grid:hover .header>.fa{
+	visibility: visible;
+}
+.message-grid:hover {
+	background-color: #f9f9f9;
+}
+.message-grid.first {
+	display: grid;
+	grid-template-columns: 36px 1fr;
+	grid-template-rows: 22px 14px 1fr;
+	grid-template-areas:	"img head"
+							"img mess"
+							". mess";
+}
+.message-grid.first .user-img{
+	grid-area: img;
+	background: url("https://ca.slack-edge.com/T6W2JP924-U6WPU7CJX-g04a1bbdf8bd-72");
+	background-size: 100% 100%;
+	border-radius: 5px;
+}
+.message-grid.first .header{
+	grid-area: head;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-end;
+	align-self: start;
+	padding-bottom: 10px; 
+}
+.message-grid.first .header, .message-grid.first .message{
+	padding-left: 10px;
+} 
+.message-grid.first .message{
+	grid-area: mess;
+}
+.message-grid .mess-tools {
+	flex-direction: row;
+	justify-content: flex-start;
+	border: 1px solid #D9D9D9;
+	border-radius: 10px;
+	position: absolute;
+	right: 4px;
+	top: -8px;
+	display: flex;
+	visibility: hidden;
+	color: #717274;
+	background-color: white;
+}
+.message-grid .header>*{
+	padding-right: 8px;
+}
+.message-grid .mess-tools:hover{
+	box-shadow:  0 1px 1px rgba(0,0,0,.1);
+	border-color: rgba(0,0,0,.3);
+	cursor: pointer;
+}
+.message-grid .mess-tools>.fa:hover {
+	color: #0576b9;
+}
+.message-grid .mess-tools>.fa{
+	padding: 6px 8px 8px 8px;
+	border-right: 1px solid #D9D9D9;
+	font-weight: bold;
+}
+.message-grid .mess-tools>.fa:last-child{
+	border-right: none;
+}
+.message-grid.first .header>a{
+	font-size: 15px;
+	color: #2c2d30;
+	font-weight: bold;
+}
+.message-grid.first .header>a:hover{
+	text-decoration: underline;
+}
+.message-grid.first .header>p{
+	font-size: 12px;
+	color: #717274;
+}
+.message-grid.first .header>i{
+	font-size: 12px;
+	color: #717274;
+	font-weight: bold;
+}
+.message-grid .header>i:hover{
+	color: #ffcc00;
+	cursor: pointer;
+}
+.message-grid.first .message>p {
+	font-size: 15px;
+	color: #2c2d30;
+}
