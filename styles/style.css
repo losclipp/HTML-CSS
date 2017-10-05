@@ -153,9 +153,12 @@ a {
 .hover-line:hover {
 	background-color: rgba(0,0,0,0.15);
 }
+
 .left-side .ref-and-button i{
 	opacity: 0.5;
-	
+}
+.left-side .ref-and-button div i:hover{
+	opacity: 1;
 }
 .chanels {
 	padding-bottom: 10px;
